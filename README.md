@@ -47,8 +47,11 @@ https://nilakshi15.github.io/RADIX-SORT-Visualization/
 RADIX-SORT-Visualization/
 │
 ├─ index.html      # Main HTML file
+
 ├─ style.css       # CSS styles
+
 ├─ script.js       # JavaScript for algorithm and animation
+
 └─ README.md       # Project documentation
 
 ---
@@ -62,6 +65,7 @@ This project is open-source and free to use.
 🙌 Author
 
 Nilakshi Sunil Patil
+
 LinkedIn: https://www.linkedin.com/in/nilakshi-patil-66771432b
 
 ---
