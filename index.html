@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Radix Sort Visualization</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Radix Sort Visualization</h1>
+      <p style="margin-top:8px; opacity:0.9; font-size:16px">
+        Watch how numbers are sorted digit by digit from right to left
+      </p>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-primary" onclick="generateArray()">Generate New Array</button>
+      <button class="btn btn-primary" onclick="startSort()">Start Radix Sort</button>
+      <button class="btn btn-ghost" onclick="resetArray()">Reset</button>
+    </div>
+
+    <div class="visualization-area">
+      <!-- Current Pass Indicator -->
+      <div class="pass-indicator" id="passIndicator" style="display:none">
+        Pass 1: Sorting by Ones Place (1s)
+      </div>
+
+      <!-- Original Array -->
+      <div style="text-align:center; margin-bottom:12px">
+        <h3 style="color:#374151; font-size:18px">Current Array State</h3>
+      </div>
+      <div class="array-container" id="arrayContainer">
+        <!-- Array elements will be generated here -->
+      </div>
+
+      <!-- Digit Buckets (0-9) -->
+      <div class="buckets-container" id="bucketsContainer" style="display:none">
+        <h3 style="color:#374151; text-align:center; margin-bottom:8px; font-size:18px">Digit Buckets (0-9)</h3>
+        <p style="color:#6b7280; text-align:center; font-size:14px; margin-bottom:16px">
+          Elements are distributed based on the current digit being processed
+        </p>
+        <div class="buckets-grid" id="bucketsGrid">
+          <!-- Buckets 0-9 will be generated here -->
+        </div>
+      </div>
+
+      <!-- Final Result -->
+      <div class="result-container" id="resultContainer" style="display:none">
+        <h3 style="color:#374151; text-align:center; margin-bottom:8px; font-size:18px">Final Sorted Array</h3>
+        <p style="color:#6b7280; text-align:center; font-size:14px; margin-bottom:16px">
+          Sorted using radix sort algorithm
+        </p>
+        <div class="result-array" id="resultArray">
+          <!-- Final sorted array will be shown here -->
+        </div>
+      </div>
+
+      <div class="step-info" id="stepInfo">
+        <h3>Click "Generate New Array" to start!</h3>
+        <p>Radix sort processes each digit position from right to left, using counting sort for each digit.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+</html>
